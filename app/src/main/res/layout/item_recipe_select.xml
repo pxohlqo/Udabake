@@ -2,6 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_recipe_select_cardview"
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_margin="8dp"
@@ -11,8 +12,19 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/item_root_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/cardview_dark_background">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_recipe_background_imageview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/holo_green_dark" />
 
         <TextView
             android:id="@+id/item_recipe_name"
